@@ -209,7 +209,38 @@
       box-shadow: 0 4px 20px rgba(0,0,0,0.15);
       z-index: 10;
     }
-    
+    .thank-section {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+  animation: sectionFadeIn 2s ease forwards;
+}
+
+.birthday-image {
+  max-width: 360px;
+  width: 80%;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: imageFadeIn 2s ease forwards;
+}
+
+@keyframes imageFadeIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes sectionFadeIn {
+  0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
+  100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
     @keyframes textFadeIn {
       0% { opacity: 0; transform: translate(-50%, -50%) scale(0.8); }
       100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
@@ -236,13 +267,16 @@
       </div>
       
       <!-- Moved thank-text inside boxArea -->
-      <div id="thankText" class="thank-text">
-       Tui amar jaan Pran r Bestie<br>
-        Tui joto durei thakos na kano amr sathe tor somporko class 9-10 r motoi jeno thake<br>
-        Tui amk ajkal kom jalsh eijnno onk dhonnobad.<br>
-       Tore ei din e beshi pochabo na.. karon tui ekta cute bandor. Jesob bandor cute oder bday bad e onno din jalate hoi.
-       Happy Birthday!
-      </div>
+     <div id="thankSection" class="thank-section">
+  <img id="birthdayImage" src="Bestie.jpg" alt="Happy Birthday" class="birthday-image">
+  <div id="thankText" class="thank-text">
+    Tui amar jaan Pran r Bestie<br>
+    Tui joto durei thakos na kano amr sathe tor somporko class 9-10 r motoi jeno thake<br>
+    Tui amk ajkal kom jalsh eijnno onk dhonnobad.<br>
+    Tore ei din e beshi pochabo na.. karon tui ekta cute bandor. Jesob bandor cute oder bday bad e onno din jalate hoi.<br>
+    <b>Happy Birthday!</b>
+  </div>
+</div>
     </div>
   </div>
   
@@ -337,4 +371,5 @@
   </script>
 </body>
 </html>
+
 
